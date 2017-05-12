@@ -13,7 +13,16 @@ export class CampsiteService {
     return this.campsites;
   }
 
+  getCampsiteById(id: string) {
+    return this.angularFire.object('campsites/' + id);
+  }
+
   saveCampsite(newCampsite: Campsite) {
     this.campsites.push(newCampsite);
+  }
+
+  deleteCampsite(campsite) {
+    var campsiteInDatabase = this.getCampsiteById(campsite.$key);
+    campsiteInDatabase.remove();
   }
 }

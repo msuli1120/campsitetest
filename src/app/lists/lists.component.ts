@@ -17,4 +17,8 @@ export class ListsComponent implements OnInit {
     this.campsites = this.campsiteService.getCampsites();
   }
 
+  delete(campsite) {
+    this.campsiteService.deleteCampsite(campsite);
+  }
+
 }
