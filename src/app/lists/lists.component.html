@@ -1,0 +1,12 @@
+<h2>Lists</h2>
+<ol>
+  <div *ngFor="let campsite of campsites | async">
+    <li>
+      <div class="panel">
+        <div class="panel-heading">
+          <h4>{{campsite.address}}</h4>
+        </div>
+      </div>
+    </li>
+  </div>
+</ol>

@@ -1,0 +1,13 @@
+{
+  "campsites":[{
+    "address": "2000 California Ave SW",
+    "city": "Seattle",
+    "zipcode": "98116",
+    "state": "WA"
+  }, {
+    "address": "5029 Fauntleroy Way SW",
+    "city": "Seattle",
+    "zipcode": "98106",
+    "state": "WA"
+  }]
+}

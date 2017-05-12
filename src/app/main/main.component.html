@@ -1,4 +1,20 @@
 <h2>Main</h2>
 <label>Enter City or State</label>
 <input #location>
-<button (click)="search(location.val); location.val=''">Search</button>
+<button (click)="search(location.val)">Search</button>
+
+<div *ngFor="let result of results">
+  <div class="panel">
+    <div class="panel-heading">
+      <h4>{{result.place.addressLine1Txt}}</h4>
+      <p>{{result.place.cityName}}</p>
+      <p>{{result.place.postalCode}}</p>
+      <p>{{result.place.stateProvinceCode}}</p>
+      <input type="hidden" #address value="{{result.place.addressLine1Txt}}">
+      <input type="hidden" #city value="{{result.place.cityName}}">
+      <input type="hidden" #zipcode value="{{result.place.postalCode}}">
+      <input type="hidden" #state value="{{result.place.stateProvinceCode}}">
+      <button (click)="save(address.value, city.value, zipcode.value, state.value)">Like</button>
+    </div>
+  </div>
+</div>

@@ -19,7 +19,7 @@ export class DataService {
         (res) => res.json()),
       this.http.get('https://ridb.recreation.gov/api/v1/organizations?apikey=' + this.apikeys.myApi).map(
         (res) => res.json()),
-      this.http.get('http://api.amp.active.com/v2/search/?near=' + city + '&current_page=1&per_page=10&sort=distance&exclude_children=true&api_key=' + this.apikeys.campGroundApi).map(
+      this.http.get('http://api.amp.active.com/v2/search/?near=' + city + '&current_page=1&per_page=20&exclude_children=true&api_key=' + this.apikeys.campGroundApi).map(
         (res) => res.json())
     );
   }
